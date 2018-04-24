@@ -1,5 +1,3 @@
-import '@/prototypes'
-
 class TestHelpers {
   constructor(wrapper, expect) {
     this.wrapper = wrapper
