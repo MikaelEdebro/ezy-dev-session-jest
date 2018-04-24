@@ -9,6 +9,9 @@
 3. Install Jest + assisting libs
 `npm install --save-dev jest @vue/test-utils vue-jest babel-jest jest-serializer-vue`
 
+4. Install Vue dependencies
+`npm install --save vuex vuex-persistedstate`
+
 4. Add config to package.json
 ```
 "scripts": {

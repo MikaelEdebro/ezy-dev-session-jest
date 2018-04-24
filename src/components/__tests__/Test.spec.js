@@ -1,5 +1,5 @@
 import Vuex from 'vuex'
-import { shallow, createLocalVue } from 'vue-test-utils'
+import { shallow, createLocalVue } from '@vue/test-utils'
 import HelloWorld from '@/components/HelloWorld'
 import TestHelpers from 'test/test-helpers'
 
