@@ -35,10 +35,10 @@ class TestHelpers {
     this.expect(this.wrapper.findAll(selector).length).toBe(length)
   }
   isVisible(selector) {
-    this.expect(this.find(selector).hasStyle('display', 'none')).toBe(false)
+    this.expect(this.find(selector).element.style.display).not.toEqual('none')
   }
   isHidden(selector) {
-    this.expect(this.find(selector).hasStyle('display', 'none')).toBe(true)
+    this.expect(this.find(selector).element.style.display).toEqual('none')
   }
   find(selector) {
     return this.wrapper.find(selector)
