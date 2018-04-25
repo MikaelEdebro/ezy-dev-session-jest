@@ -10,7 +10,7 @@
       </div>
     </div>
 
-    <div class="no-comments" v-if="!hasComments">
+    <div class="no-comments" v-if="!hasComments && !showLoader">
       {{ $texts.noComments }}
     </div>
   </div>

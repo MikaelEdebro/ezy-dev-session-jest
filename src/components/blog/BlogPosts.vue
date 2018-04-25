@@ -26,24 +26,15 @@ export default {
     Loader,
     BlogPost
   },
-  data() {
-    return {
-      showLoader: false
-    }
-  },
   computed: {
     ...mapGetters('blog', ['blogPosts', 'hasBlogPosts', 'numberOfPosts'])
   },
   mounted() {
-    this.showLoader = true
-    this.$store
-      .dispatch('blog/getBlogPosts')
-      .catch(error => {
+    if (!this.hasBlogPosts) {
+      this.$store.dispatch('blog/getBlogPosts').catch(error => {
         console.error(error)
       })
-      .finally(() => {
-        this.showLoader = false
-      })
+    }
   }
 }
 </script>

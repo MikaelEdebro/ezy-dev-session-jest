@@ -23,9 +23,9 @@ export const actions = {
     return new Promise((resolve, reject) => {
       getBlogPosts()
         .then(res => {
-          const posts = res.data
-          commit('saveBlogPosts', posts)
           setTimeout(() => {
+            const posts = res.data
+            commit('saveBlogPosts', posts)
             resolve(posts)
           }, PROMISE_DELAY)
         })

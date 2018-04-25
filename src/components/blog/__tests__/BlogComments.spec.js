@@ -70,7 +70,7 @@ describe('BlogComments', () => {
     expect(comments.length).toBe(2)
   })
 
-  it.only('shows message if there are no comments', async () => {
+  it('shows message if there are no comments', async () => {
     await flushPromises()
     wrapper.setData({
       comments: []
