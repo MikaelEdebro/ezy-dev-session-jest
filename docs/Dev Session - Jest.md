@@ -1,16 +1,16 @@
 # Front-end Unit Testing with Vue.js & Jest
 
 1. Scaffold project with vue-cli
-`vue init webpack dev-session-jest`
+vue init webpack jest-new
 
 2. Run solution to make sure it's working
-`npm run dev`
+npm run dev
 
 3. Install Jest + assisting libs
-`npm install --save-dev jest @vue/test-utils vue-jest babel-jest jest-serializer-vue node-sass sass-loader flush-promises`
+npm install --save-dev jest @vue/test-utils vue-jest babel-jest jest-serializer-vue node-sass sass-loader flush-promises
 
 4. Install Vue dependencies
-`npm install --save vuex axios promise.prototype.finally`
+npm install --save vuex axios promise.prototype.finally
 
 5. Add config to package.json (copy from existing)
 ```json
@@ -73,9 +73,10 @@ In order for advanced watch mode to work (currently not using, but i real app it
 ## Tests for BlogPost.vue
 "hides the body initially"
 "expands body when clicking title"
-"shows comments when expanding"
 "renders the correct content"
 "adds expanded class to expanded blog post"
+"shows comments when expanding"
+"only shows comments if enabled in $settings"
 
 ## Tests for BlogComments.vue
 "calls action to get comments on mount"

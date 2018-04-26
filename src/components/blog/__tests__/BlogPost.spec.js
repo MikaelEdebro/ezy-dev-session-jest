@@ -45,20 +45,23 @@ describe('BlogPost', () => {
     h.click('.title')
     h.domHasNot('.body')
   })
-
-  it('shows comments when expanding', () => {
-    h.click('.title')
-    h.domHas('.stub-comments')
-  })
-
   it('renders the correct content', () => {
     h.see('Some title')
     h.click('.title')
     h.see('Lorem ipsum')
   })
-
   it('adds expanded class to expanded blog post', () => {
     h.click('.title')
     expect(wrapper.classes()).toContain('expanded')
+  })
+  it('shows comments when expanding', () => {
+    h.click('.title')
+    h.domHas('.stub-comments')
+  })
+  it('only shows comments if enabled in $settings', () => {
+    h.click('.title')
+    h.domHas('.stub-comments')
+    wrapper.vm.$settings.enableComments = false
+    h.domHasNot('.stub-comments')
   })
 })
